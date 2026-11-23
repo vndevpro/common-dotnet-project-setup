@@ -1,0 +1,20 @@
+<Project>
+  <!-- 
+    Industry Standard: Central Package Management (CPM)
+    Enabling this forces all projects in the solution to use the package versions defined below,
+    preventing dependency drift and version mismatches.
+  -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  
+  <!-- 
+    Global Package Versions
+    Define your third-party NuGet package versions here using <PackageVersion />.
+    In individual .csproj files, reference them using <PackageReference Include="..." /> WITHOUT a Version attribute.
+  -->
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="10.0.0" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+  </ItemGroup>
+</Project>
